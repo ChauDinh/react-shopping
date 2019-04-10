@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import AwesomeImage from "../components/Display/AwesomeImage";
-import HoverOpacity from "../components/Display/HoverOpacity";
+import withHoverOpacity from "../components/Display/withHoverOpacity";
+
+const HoverOpacityAwesomeImage = withHoverOpacity(AwesomeImage, 0.1);
 
 export class Index extends Component {
   render() {
     return (
       <div>
-        <HoverOpacity>
-          <AwesomeImage src="https://picsum.photos/200/300" />
-        </HoverOpacity>
+        <HoverOpacityAwesomeImage src="https://picsum.photos/200/300" />
       </div>
     )
   }
